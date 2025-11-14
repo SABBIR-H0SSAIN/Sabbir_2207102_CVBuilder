@@ -7,7 +7,7 @@
 <?import javafx.scene.text.*?>
 
 
-<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:controller="com.example.sabbir_2207102_cvbuilder.controllers.HomePageController" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
     <center>
         <AnchorPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
             <children>
@@ -33,7 +33,7 @@
                                                 <Insets top="12.0" />
                                             </VBox.margin>
                                         </Text>
-                                        <Button fx:id="goToFormPage" mnemonicParsing="false" style="-fx-background-color: rgb(142,81,255); -fx-border-radius: 20px; -fx-background-radius: 20px;" text="Create a new CV" textAlignment="CENTER" textFill="#fbfbfb">
+                                        <Button onAction="#goToCVFormPageAction" fx:id="goToCvFormPageButton" mnemonicParsing="false" style="-fx-background-color: rgb(142,81,255); -fx-border-radius: 20px; -fx-background-radius: 20px;" text="Create a new CV" textAlignment="CENTER" textFill="#fbfbfb">
                                             <font>
                                                 <Font name="Comic Sans MS Bold" size="15.0" />
                                             </font>
