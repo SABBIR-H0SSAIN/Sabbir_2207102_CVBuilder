@@ -134,7 +134,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.sabbir_2207102_cvbuilder/com.example.sabbir_2207102_cvbuilder.HelloApplication
+                                com.example.sabbir_2207102_cvbuilder/com.example.sabbir_2207102_cvbuilder.CVBuilderApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
