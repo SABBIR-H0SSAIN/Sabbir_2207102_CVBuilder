@@ -10,7 +10,7 @@ public class CVFormModel {
     private String workExperiances;
     private String projects;
 
-    public CVFormModel(String fullName, String email, String phoneNumber, String address, String educationalQualifications, String skills, String workExperiances, String projects) {
+    public void setData(String fullName, String email, String phoneNumber, String address, String educationalQualifications, String skills, String workExperiances, String projects) {
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;
