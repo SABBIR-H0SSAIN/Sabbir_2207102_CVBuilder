@@ -1,14 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cv.controllers.CreateNewCVController">
+    <center>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="698.0">
+            <children>
+                <BorderPane prefHeight="49.0" prefWidth="698.0" style="-fx-background-color: rgb(142,81,255);">
+                    <center>
+                        <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="CV Builder Form" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font name="Berlin Sans FB" size="25.0" />
+                            </font>
+                        </Text>
+                    </center>
+                </BorderPane>
+                <GridPane layoutX="40.0" layoutY="59.0" prefHeight="411.0" prefWidth="643.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.33331298828125" minWidth="10.0" prefWidth="210.99996439615884" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="431.6667022705078" minWidth="10.0" prefWidth="431.6667022705078" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="47.33332824707031" minHeight="10.0" prefHeight="36.66667683919271" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="86.66667175292969" minHeight="10.0" prefHeight="36.666671752929695" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="42.66670227050783" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="136.99998474121094" minHeight="10.0" prefHeight="39.33333333333334" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="108.33332824707031" minHeight="10.0" prefHeight="71.66666666666669" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.66665649414062" minHeight="10.0" prefHeight="68.66666666666669" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="85.33333333333331" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="54.666666666666686" minHeight="10.0" prefHeight="52.666666666666686" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Full Name">
+                            <font>
+                                <Font name="Berlin Sans FB" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label text="Phone Number" GridPane.rowIndex="2">
+                            <font>
+                                <Font name="Berlin Sans FB" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label text="Email Address" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Berlin Sans FB" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label text="Address" GridPane.rowIndex="3">
+                            <font>
+                                <Font name="Berlin Sans FB" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="19.0" prefWidth="193.0" text="Educational Qualifications" GridPane.rowIndex="4">
+                            <font>
+                                <Font name="Berlin Sans FB" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label text="Skills" GridPane.rowIndex="5">
+                            <font>
+                                <Font name="Berlin Sans FB" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label text="Work Experiances" GridPane.rowIndex="6">
+                            <font>
+                                <Font name="Berlin Sans FB" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label text="Projects" GridPane.rowIndex="7">
+                            <font>
+                                <Font name="Berlin Sans FB" size="17.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="fullName" prefHeight="31.0" prefWidth="432.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="email" prefHeight="31.0" prefWidth="432.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="phoneNumber" prefHeight="32.0" prefWidth="432.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="educationalQualifications" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" top="5.0" />
+                            </GridPane.margin>
+                        </TextArea>
+                        <TextArea fx:id="skills" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" top="5.0" />
+                            </GridPane.margin>
+                        </TextArea>
+                        <TextArea fx:id="workExperiances" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" top="5.0" />
+                            </GridPane.margin>
+                        </TextArea>
+                        <TextArea fx:id="projects" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="address" prefHeight="32.0" prefWidth="432.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    </children>
+                </GridPane>
+                <Button layoutX="574.0" layoutY="493.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: rgb(142,81,255); -fx-border-radius: 13px; -fx-background-radius: 13px;" text="Create CV" textAlignment="CENTER" textFill="#fbfbfb">
+                    <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
