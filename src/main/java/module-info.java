@@ -11,6 +11,7 @@ module com.example.sabbir_2207102_cvbuilder {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires javafx.graphics;
+    requires javafx.base;
 
     opens com.example.sabbir_2207102_cvbuilder to javafx.fxml;
     exports com.example.sabbir_2207102_cvbuilder;

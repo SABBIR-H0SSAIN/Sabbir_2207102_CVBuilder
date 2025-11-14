@@ -1,13 +1,49 @@
 package com.example.sabbir_2207102_cvbuilder.controllers;
 
 import com.example.sabbir_2207102_cvbuilder.models.CVFormModel;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class CVPreviewController {
+    @FXML private Text fullName;
+    @FXML private Text email;
+    @FXML private Text phoneNumber;
+    @FXML private Text address;
+    @FXML private Text educationalQualifications;
+    @FXML private Text skills;
+    @FXML private Text workExperiances;
+    @FXML private Text projects;
+
     CVFormModel cvFormModel;
     public void setData(CVFormModel cvFormModel) {
         this.cvFormModel = cvFormModel;
+        this.fullName.setText(cvFormModel.getFullName());
+        this.email.setText(cvFormModel.getEmail());
+        this.phoneNumber.setText(cvFormModel.getPhoneNumber());
+        this.address.setText(cvFormModel.getAddress());
+        this.educationalQualifications.setText(cvFormModel.getEducationalQualifications());
+        this.skills.setText(cvFormModel.getSkills());
+        this.workExperiances.setText(cvFormModel.getWorkExperiances());
+        this.projects.setText(cvFormModel.getProjects());
+
     }
     public CVFormModel getCVFormInstance(){
         return cvFormModel;
+    }
+    public  void onbackHome(ActionEvent event) throws IOException{
+        Parent createRoot = FXMLLoader.load(getClass().getResource("/com/example/sabbir_2207102_cvbuilder/views/homepage.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(createRoot));
+        stage.show();
     }
 }
