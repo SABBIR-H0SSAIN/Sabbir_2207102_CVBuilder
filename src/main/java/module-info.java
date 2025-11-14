@@ -13,4 +13,7 @@ module com.example.sabbir_2207102_cvbuilder {
 
     opens com.example.sabbir_2207102_cvbuilder to javafx.fxml;
     exports com.example.sabbir_2207102_cvbuilder;
+
+    opens com.example.sabbir_2207102_cvbuilder.controllers to javafx.fxml;
+    exports com.example.sabbir_2207102_cvbuilder.controllers;
 }
