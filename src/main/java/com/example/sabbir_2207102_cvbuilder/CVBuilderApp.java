@@ -10,9 +10,9 @@ import java.io.IOException;
 public class CVBuilderApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CVBuilderApp.class.getResource("/views/homepage.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(CVBuilderApp.class.getResource("/com/example/sabbir_2207102_cvbuilder/views/homepage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("CV Builder app");
         stage.setScene(scene);
         stage.show();
     }
