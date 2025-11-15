@@ -7,8 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Alert;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -23,6 +23,8 @@ public class CVPreviewController {
     @FXML private Text skills;
     @FXML private Text workExperiances;
     @FXML private Text projects;
+    @FXML private VBox content;
+
 
     CVFormModel cvFormModel;
     public void setData(CVFormModel cvFormModel) {
@@ -36,6 +38,17 @@ public class CVPreviewController {
         this.workExperiances.setText(cvFormModel.getWorkExperiances());
         this.projects.setText(cvFormModel.getProjects());
 
+    }
+
+    public void onEditAction(ActionEvent event) throws IOException{
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sabbir_2207102_cvbuilder/views/create_cv_form.fxml"));
+        Parent root = loader.load();
+        CreateCVFormController createCVFormController = loader.getController();
+        createCVFormController.setData(this.getCVFormInstance());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
     public CVFormModel getCVFormInstance(){
         return cvFormModel;
