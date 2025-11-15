@@ -96,12 +96,12 @@
                         <TextField fx:id="address" prefHeight="32.0" prefWidth="432.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                     </children>
                 </GridPane>
-                <Button onAction="#buildCVPageAction" layoutX="574.0" layoutY="493.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: rgb(142,81,255); -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Create CV" textAlignment="CENTER" textFill="#fbfbfb">
+                <Button layoutX="574.0" layoutY="493.0" mnemonicParsing="false" onAction="#buildCVPageAction" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: rgb(142,81,255); -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Create CV" textAlignment="CENTER" textFill="#fbfbfb">
                     <font>
                         <Font name="Berlin Sans FB" size="18.0" />
                     </font>
                 </Button>
-            <Button layoutX="451.0" layoutY="493.0" mnemonicParsing="false" onAction="#backToHomePageAction" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: gray; -fx-border-radius: 13px; -fx-background-radius: 13px;" text="Cancel" textAlignment="CENTER" textFill="#fbfbfb">
+            <Button layoutX="451.0" layoutY="493.0" mnemonicParsing="false" onAction="#backToHomePageAction" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: gray; -fx-border-radius: 13px; -fx-background-radius: 13px;" text="Home" textAlignment="CENTER" textFill="#fbfbfb">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
