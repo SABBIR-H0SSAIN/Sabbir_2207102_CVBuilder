@@ -47,6 +47,7 @@ public class CreateCVFormController {
         this.workExperiances.setText(cvFormModel.getWorkExperiances());
         this.projects.setText(cvFormModel.getProjects());
         this.imagePath = cvFormModel.getImagePath();
+        this.profileImageView.setImage(cvFormModel.getImage());
     }
 
     public void onImageUpload(ActionEvent event) throws IOException {
@@ -61,9 +62,15 @@ public class CreateCVFormController {
     }
 
     public void buildCVPageAction(ActionEvent event) throws IOException{
-        Alert alert= new Alert(Alert.AlertType.ERROR,"Fillup all the required types first");
+        Alert alert= new Alert(Alert.AlertType.ERROR,"Fillup all the required fields first");
         if(fullName.getText().isEmpty()||email.getText().isEmpty()||phoneNumber.getText().isEmpty() || address.getText().isEmpty() || educationalQualifications.getText().isEmpty() || skills.getText().isEmpty() || workExperiances.getText().isEmpty()||projects.getText().isEmpty()){
             alert.show();
+            return;
+        }
+
+        if(imagePath == null){
+            Alert a=new Alert(Alert.AlertType.ERROR,"Upload a photo to continue");
+            a.show();
             return;
         }
         CVFormModel cvFormData = new CVFormModel();
