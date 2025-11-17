@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -24,7 +25,7 @@ public class CVPreviewController {
     @FXML private Text workExperiances;
     @FXML private Text projects;
     @FXML private VBox content;
-
+    @FXML private ImageView profileImageView;
 
     CVFormModel cvFormModel;
     public void setData(CVFormModel cvFormModel) {
@@ -37,6 +38,7 @@ public class CVPreviewController {
         this.skills.setText(cvFormModel.getSkills());
         this.workExperiances.setText(cvFormModel.getWorkExperiances());
         this.projects.setText(cvFormModel.getProjects());
+        this.profileImageView.setImage(cvFormModel.getImage());
 
     }
 

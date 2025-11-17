@@ -10,8 +10,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class CreateCVFormController {
@@ -23,6 +27,8 @@ public class CreateCVFormController {
     @FXML private TextArea skills;
     @FXML private TextArea workExperiances;
     @FXML private TextArea projects;
+    @FXML private ImageView profileImageView;
+    private String imagePath=null;
 
     public  void backToHomePageAction(ActionEvent event) throws IOException{
         Parent createRoot = FXMLLoader.load(getClass().getResource("/com/example/sabbir_2207102_cvbuilder/views/homepage.fxml"));
@@ -40,7 +46,18 @@ public class CreateCVFormController {
         this.skills.setText(cvFormModel.getSkills());
         this.workExperiances.setText(cvFormModel.getWorkExperiances());
         this.projects.setText(cvFormModel.getProjects());
+        this.imagePath = cvFormModel.getImagePath();
+    }
 
+    public void onImageUpload(ActionEvent event) throws IOException {
+        FileChooser imageChooser = new FileChooser();
+        imageChooser.setTitle("Select a image for your cv");
+        imageChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Images", "*.jpg","*.png"));
+        File image = imageChooser.showOpenDialog(null);
+        if(image!=null){
+            profileImageView.setImage(new Image(image.toURI().toString()));
+        }
+        this.imagePath = image.toURI().toString();
     }
 
     public void buildCVPageAction(ActionEvent event) throws IOException{
@@ -58,6 +75,7 @@ public class CreateCVFormController {
         cvFormData.setSkills(skills.getText());
         cvFormData.setWorkExperiances(workExperiances.getText());
         cvFormData.setProjects(projects.getText());
+        cvFormData.setImagePath(imagePath);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/sabbir_2207102_cvbuilder/views/preview_cv_page.fxml"));
         Parent root = loader.load();
