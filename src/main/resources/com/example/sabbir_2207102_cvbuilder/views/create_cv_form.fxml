@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sabbir_2207102_cvbuilder.controllers.CreateCVFormController">
-   <bottom>
+    <bottom>
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="707.0" BorderPane.alignment="CENTER">
             <children>
                 <BorderPane prefHeight="49.0" prefWidth="698.0" style="-fx-background-color: rgb(142,81,255);">
@@ -105,23 +105,32 @@
                         <TextField fx:id="address" prefHeight="32.0" prefWidth="432.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                     </children>
                 </GridPane>
-                <Button layoutX="557.0" layoutY="510.0" mnemonicParsing="false" onAction="#buildCVPageAction" prefHeight="35.0" prefWidth="125.0" style="-fx-background-color: rgb(142,81,255); -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Generate CV" textAlignment="CENTER" textFill="#fbfbfb">
+                <Button layoutX="497.0" layoutY="510.0" mnemonicParsing="false" onAction="#buildCVPageAction" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: rgb(142,81,255); -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Generate/Update" textAlignment="CENTER" textFill="#fbfbfb">
                     <font>
                         <Font name="Berlin Sans FB" size="18.0" />
                     </font>
+                    <padding>
+                        <Insets bottom="8.0" left="20.0" right="20.0" top="8.0" />
+                    </padding>
                 </Button>
-            <Button layoutX="434.0" layoutY="510.0" mnemonicParsing="false" onAction="#backToHomePageAction" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: gray; -fx-border-radius: 13px; -fx-background-radius: 13px;" text="Home" textAlignment="CENTER" textFill="#fbfbfb">
-               <font>
-                  <Font name="Berlin Sans FB" size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="imageUploadButton" layoutX="265.0" layoutY="511.0" mnemonicParsing="false" onAction="#onImageUpload" style="-fx-background-color: rgb(122,91,255); -fx-background-radius: 10px;" text="📷 Upload Image" textFill="WHITE">
-               <font>
-                  <Font name="Berlin Sans FB" size="18.0" />
-               </font>
-            </Button>
-            <ImageView fx:id="profileImageView" fitHeight="81.0" fitWidth="98.0" layoutX="97.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true" />
+                <Button layoutX="398.0" layoutY="509.0" mnemonicParsing="false" onAction="#backToHomePageAction" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: gray; -fx-border-radius: 10; -fx-background-radius: 10;" text="Home" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="8.0" left="20.0" right="20.0" top="8.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="imageUploadButton" layoutX="216.0" layoutY="510.0" mnemonicParsing="false" onAction="#onImageUpload" style="-fx-background-color: rgb(122,91,255); -fx-background-radius: 10px;" text="📷 Upload Image" textFill="WHITE">
+                    <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="8.0" left="20.0" right="20.0" top="8.0" />
+                    </padding>
+                </Button>
+                <ImageView fx:id="profileImageView" fitHeight="81.0" fitWidth="98.0" layoutX="72.0" layoutY="468.0" pickOnBounds="true" preserveRatio="true" />
             </children>
         </AnchorPane>
-   </bottom>
+    </bottom>
 </BorderPane>
