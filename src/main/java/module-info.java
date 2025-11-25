@@ -12,10 +12,13 @@ module com.example.sabbir_2207102_cvbuilder {
     requires com.almasb.fxgl.all;
     requires javafx.graphics;
     requires javafx.base;
+    requires java.sql;
 
     opens com.example.sabbir_2207102_cvbuilder to javafx.fxml;
     exports com.example.sabbir_2207102_cvbuilder;
 
     opens com.example.sabbir_2207102_cvbuilder.controllers to javafx.fxml;
     exports com.example.sabbir_2207102_cvbuilder.controllers;
+
+    exports com.example.sabbir_2207102_cvbuilder.models;
 }
